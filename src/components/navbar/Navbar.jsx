@@ -1,6 +1,5 @@
 import React from "react";
 import { Sun, Search } from "lucide-react";
-import LogoF from "../../assets/LogoF.png"; // Asegúrate de que la ruta sea correcta
 
 const Navbar = () => {
   return (
@@ -9,7 +8,7 @@ const Navbar = () => {
         
         {/* LOGO */}
         <div className="flex items-center space-x-3">
-          <img src={LogoF} alt="Logo Fundación" className="h-12 w-12 rounded-full" />
+          <img src="/LogoF.png" alt="Logo Fundación" className="h-12 w-12 rounded-full" />
           <span className="font-bold text-lg tracking-wide">Fundación Social Educativa Sueños de Amor</span>
         </div>
 
