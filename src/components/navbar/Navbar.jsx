@@ -1,5 +1,5 @@
 import React from "react";
-import { Sun, Search } from "lucide-react";
+import logo from "../../assets/logof.png";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
         
         {/* LOGO */}
         <div className="flex items-center space-x-3">
-          <img src="/LogoF.png" alt="Logo Fundación" className="h-12 w-12 rounded-full" />
+          <img src={logo} alt="Logo Fundación" className="h-12 w-12 rounded-full" />
           <span className="font-bold text-lg tracking-wide">Fundación Social Educativa Sueños de Amor</span>
         </div>
 
@@ -28,10 +28,8 @@ const Navbar = () => {
               placeholder="Search"
               className="px-4 py-2 rounded-full text-black w-40 md:w-56 focus:outline-none"
             />
-            <Search className="absolute right-3 top-2.5 text-gray-500" size={18} />
           </div>
           <button className="p-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 transition">
-            <Sun size={20} />
           </button>
         </div>
       </div>
