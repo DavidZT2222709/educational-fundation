@@ -5,7 +5,32 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        gradientMove: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        waveMove: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(20px)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        wave: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-50px)" },
+        },
+      },
+      animation: {
+        gradientMove: "gradientMove 15s ease infinite",
+        waveMove: "waveMove 6s ease-in-out infinite",
+        float: "float 4s ease-in-out infinite",
+        wave: "wave 6s ease-in-out infinite",
+      },
+    },
   },
   plugins: [],
 }
