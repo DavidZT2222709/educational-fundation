@@ -46,7 +46,7 @@ const Hero = () => {
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-wide">
               Fundación Social Educativa <br />
-              <span className="text-yellow-300">Sueños de Amor (FSEA)</span>
+              <span className="text-yellow-300">Sueños de Amor (FUNDSAM)</span>
             </h1>
             <p className="text-lg md:text-xl">
               Transformando vidas a través de la educación y el acompañamiento social.
