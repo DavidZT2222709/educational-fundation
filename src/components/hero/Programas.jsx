@@ -19,18 +19,57 @@ const programas = [
 const Programas = () => {
   return (
     <section className="relative bg-gray-50">
-      {/* --- División onda SVG (Hero -> Programas) --- */}
+      {/* --- División onda SVG animada (Hero -> Programas) --- */}
       <div className="absolute -top-20 w-full overflow-hidden leading-none rotate-180">
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          className="h-20 w-full"
-        >
-          <path
-            d="M-9.31,36.22 C149.99,150.00 271.75,-49.98 502.54,77.01 L500.00,0.00 L0.00,0.00 Z"
-            className="fill-white animate-wave"
-          ></path>
-        </svg>
+        <div className="relative w-[200%]">
+          {/* Onda principal */}
+          <div className="absolute top-0 left-0 w-[200%] animate-waveSlow">
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              className="h-20 w-[50%] float-left"
+            >
+              <path
+                d="M0.00,49.98 C150.00,150.00 349.99,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                className="fill-white opacity-80"
+              ></path>
+            </svg>
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              className="h-20 w-[50%] float-left"
+            >
+              <path
+                d="M0.00,49.98 C150.00,150.00 349.99,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                className="fill-white opacity-80"
+              ></path>
+            </svg>
+          </div>
+
+          {/* Onda secundaria */}
+          <div className="absolute top-0 left-0 w-[200%] animate-waveSlower">
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              className="h-20 w-[50%] float-left"
+            >
+              <path
+                d="M0.00,49.98 C150.00,150.00 349.99,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                className="fill-white opacity-50"
+              ></path>
+            </svg>
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              className="h-20 w-[50%] float-left"
+            >
+              <path
+                d="M0.00,49.98 C150.00,150.00 349.99,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                className="fill-white opacity-50"
+              ></path>
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* --- Título --- */}
