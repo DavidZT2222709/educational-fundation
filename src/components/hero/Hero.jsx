@@ -53,17 +53,36 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* BOTONES */}
+          {/* BOTONES CON EFECTO ANIMADO */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            {/* Botón amarillo */}
             <a
               href="/inscripciones"
-              className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-500 transition text-center"
+              className="
+                relative overflow-hidden px-6 py-3 rounded-full font-semibold text-black bg-yellow-400 
+                shadow-md text-center transition-transform duration-500
+                hover:scale-105 hover:text-white
+                before:content-[''] before:absolute before:left-[-50px] before:top-0 
+                before:h-full before:w-0 before:bg-yellow-400 before:skew-x-12 before:-z-10 
+                before:transition-all before:duration-700
+                hover:before:w-[250%]
+              "
             >
               Ir a Inscripciones
             </a>
+
+            {/* Botón azul translúcido */}
             <a
               href="/programas"
-              className="bg-white/20 backdrop-blur-md text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-white/30 transition text-center"
+              className="
+                relative overflow-hidden px-6 py-3 rounded-full font-semibold text-white bg-white/20 backdrop-blur-md 
+                shadow-md text-center transition-transform duration-500
+                hover:scale-105 hover:text-black
+                before:content-[''] before:absolute before:left-[-50px] before:top-0 
+                before:h-full before:w-0 before:bg-white before:skew-x-12 before:-z-10 
+                before:transition-all before:duration-700
+                hover:before:w-[250%]
+              "
             >
               Ver Programas
             </a>

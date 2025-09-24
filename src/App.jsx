@@ -2,7 +2,8 @@ import Navbar from './components/navbar/Navbar.jsx'
 import Hero from './components/hero/Hero.jsx'
 import Inscripciones from './components/hero/Inscripciones.jsx'  
 import Programas from './components/hero/Programas.jsx'
-
+import Testimonials from './components/hero/Testimonials.jsx'
+import Requirements from './components/hero/Requirements.jsx'
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
       {/* Programas */}
       <Programas />
 
+      {/* Testimonios */}
+      <Testimonials />
+
+      {/* Requisitos */}
+      <Requirements />
     </main>
   )
 }
