@@ -51,7 +51,13 @@ const Requirements = () => {
             ))}
           </div>
 
-          <button className="mt-10 bg-[#2A0A73] hover:bg-[#1e0754] text-white font-semibold px-8 py-3 rounded-lg shadow-md transition">
+          <button className="relative overflow-hidden px-6 py-3 rounded-full font-semibold text-white bg-blue-700 
+                shadow-md text-center transition-transform duration-500
+                hover:scale-105 hover:text-white
+                before:content-[''] before:absolute before:left-[-50px] before:top-0 
+                before:h-full before:w-0 before:bg-yellow-500 before:skew-x-12 before:-z-10 
+                before:transition-all before:duration-700
+                hover:before:w-[250%] mt-8">
             Solicitar Inscripción
           </button>
         </div>
@@ -59,9 +65,9 @@ const Requirements = () => {
         {/* Imagen */}
         <div className="flex justify-center">
           <img
-            src=""
+            src="https://img.freepik.com/foto-gratis/colegas-leyendo-usando-computadora-portatil-sesion-estudio_23-2149285397.jpg?semt=ais_hybrid&w=740&q=80"
             alt="Estudiantes Fundación"
-            className="rounded-2xl shadow-2xl max-h-[450px] object-cover transform hover:scale-105 transition duration-500"
+            className="rounded-2xl shadow-2xl max-h-[600px] object-cover transform hover:scale-105 transition duration-500"
           />
         </div>
       </div>
