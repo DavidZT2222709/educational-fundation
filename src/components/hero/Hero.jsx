@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* FONDO GRADIENTE EN MOVIMIENTO */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0057D9] via-[#003580] to-[#002244] bg-[length:200%_200%] animate-gradientMove"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#002F6C] via-[#004AAD] to-[#0066CC] animate-gradientMove"></div>
 
       {/* ONDAS SVG ANIMADAS */}
       <div className="absolute inset-0 opacity-30">

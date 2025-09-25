@@ -31,7 +31,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#004AAD] py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-[#002F6C] via-[#004AAD] to-[#0066CC] py-16 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-2">
           Testimonios

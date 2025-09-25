@@ -9,6 +9,7 @@ const programas = [
   { id: 5, titulo: "Asistente administrativo", semanas: "20 Semanas", clases: "20 Clases", imagen: "https://www.polisura.edu.co/wp-content/uploads/2024/07/auxiliar-administrativo.jpg" },
   { id: 6, titulo: "Auxiliar en Enfermería", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://essaeformacion.com/wp-content/uploads/2021/11/AUXILIAR-DE-ENFERMERIA.jpg" },
   { id: 7, titulo: "Belleza y Estética", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://drtestetica.com/wp-content/uploads/2023/08/Estetica-integral-y-cosmetologia-para-la-belleza-DRT.jpg" },
+  { id: 8, titulo: "Belleza y Estética", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://drtestetica.com/wp-content/uploads/2023/08/Estetica-integral-y-cosmetologia-para-la-belleza-DRT.jpg" },
 ];
 
 const Programas = () => {
