@@ -59,11 +59,11 @@ const Hero = () => {
             <a
               href="/inscripciones"
               className="
-                relative overflow-hidden px-6 py-3 rounded-full font-semibold text-black bg-yellow-400 
+                relative overflow-hidden px-6 py-3 rounded-full font-semibold text-white bg-yellow-500 
                 shadow-md text-center transition-transform duration-500
                 hover:scale-105 hover:text-white
                 before:content-[''] before:absolute before:left-[-50px] before:top-0 
-                before:h-full before:w-0 before:bg-yellow-400 before:skew-x-12 before:-z-10 
+                before:h-full before:w-0 before:bg-blue-700 before:skew-x-12 before:-z-10 
                 before:transition-all before:duration-700
                 hover:before:w-[250%]
               "

@@ -41,8 +41,8 @@ const Reasons = () => {
           <div
             key={index}
             className="group bg-white/10 border border-white/20 rounded-2xl p-8 text-center
-                       hover:scale-105 hover:border-green-400 transition-all duration-300 
-                       shadow-xl hover:shadow-green-500/30 backdrop-blur-md"
+                       hover:scale-105 hover:border-white transition-all duration-300 
+                       shadow-xl hover:shadow-white/30 backdrop-blur-md"
           >
             <div className="flex justify-center mb-6">
               <img

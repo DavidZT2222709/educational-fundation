@@ -1,12 +1,12 @@
-import Navbar from './components/navbar/Navbar.jsx'
-import Footer from './components/footer/Footer.jsx'
-import Hero from './components/hero/Hero.jsx'
-import Inscripciones from './components/hero/Inscripciones.jsx'  
-import Programas from './components/hero/Programas.jsx'
-import Testimonials from './components/hero/Testimonials.jsx'
-import Requirements from './components/hero/Requirements.jsx'
+import Navbar from './components/staticelements/Navbar.jsx'
+import Footer from './components/staticelements/Footer.jsx'
+import Hero from './components/inicio/Hero.jsx'
+import Programas from './components/inicio/Programas.jsx'
+import Testimonials from './components/inicio/Testimonials.jsx'
+import Requirements from './components/inicio/Requirements.jsx'
 import WhatsAppButton from './components/staticelements/WhatsAppButton.jsx'
-import Reasons from './components/hero/Reasons.jsx'
+import Reasons from './components/inicio/Reasons.jsx'
+import Stats from './components/inicio/Stats.jsx'
 
 function App() {
   return (
@@ -22,6 +22,9 @@ function App() {
 
       {/* Testimonios */}
       <Testimonials />
+
+      {/* Stats */}
+      <Stats />
 
       {/* Por qué elegirnos */}
       <Reasons />

@@ -1,0 +1,60 @@
+/* Efecto hover principal */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #FFD700; /* Amarillo institucional */
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 0.6s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #004AAD;
+  transform: scale(1.05);
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+}
+
+.nav-link:hover::before {
+  width: 250%;
+}
+
+/* Dropdown links */
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #004AAD;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.dropdown-link:hover {
+  background-color: #FFD700;
+  color: #004AAD;
+}
+
+/* Subitems */
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #004AAD;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #FFD700;
+  color: #004AAD;
+}
