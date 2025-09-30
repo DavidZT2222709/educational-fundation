@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logof.png";
 import "./Navbar.css"; // Importamos los estilos personalizados
+{/*import AllCourses from "../../AllCourses";*/}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = () => {
               
               {/* Bachillerato */}
               <div className="group relative">
-                <a href="#" className="dropdown-link">Bachillerato ▸</a>
+                <a href="/AllCourses" className="dropdown-link">Bachillerato ▸</a>
                 {/* Submenú de Bachillerato */}
                 <div className="absolute left-full top-0 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
                   <a href="/curso1" className="dropdown-item">Curso 1</a>
@@ -62,7 +63,7 @@ const Navbar = () => {
 
               {/* Carreras técnicas */}
               <div className="group relative">
-                <a href="#" className="dropdown-link">Carreras Técnicas ▸</a>
+                <a href="/AllCourses" className="dropdown-link">Carreras Técnicas ▸</a>
                 {/* Submenú de Carreras Técnicas */}
                 <div className="absolute left-full top-0 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
                   <a href="/carrera1" className="dropdown-item">Carrera 1</a>

@@ -1,43 +1,48 @@
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
+// Statical components
 import Navbar from './components/staticelements/Navbar.jsx'
 import Footer from './components/staticelements/Footer.jsx'
+import WhatsAppButton from './components/staticelements/WhatsAppButton.jsx'
+
+//Sections
 import Hero from './components/inicio/Hero.jsx'
 import Programas from './components/inicio/Programas.jsx'
 import Testimonials from './components/inicio/Testimonials.jsx'
 import Requirements from './components/inicio/Requirements.jsx'
-import WhatsAppButton from './components/staticelements/WhatsAppButton.jsx'
 import Reasons from './components/inicio/Reasons.jsx'
 import Stats from './components/inicio/Stats.jsx'
 
+// Pages
+import AllCourses from './AllCourses.jsx'
+
 function App() {
   return (
-    <main className="font-sans text-gray-900 bg-white">
-      {/* Navbar */}
-      <Navbar />
+    <Router>
+      <main>
+        <Navbar />
 
-      {/* Hero Section */}
-      <Hero />
+        <Routes>
+          {/* Principal Pages */}
+          <Route path='/' element={
+            <>
+              <Hero />
+              <Programas />
+              <Testimonials />
+              <Requirements />
+              <Reasons />
+              <Stats />
+            </>
+          } />
 
-      {/* Programas */}
-      <Programas />
+          {/* All Courses Page */}
+          <Route path='/AllCourses' element={<AllCourses />} />
+        </Routes>
 
-      {/* Testimonios */}
-      <Testimonials />
-
-      {/* Stats */}
-      <Stats />
-
-      {/* Por qué elegirnos */}
-      <Reasons />
-
-      {/* Requisitos */}
-      <Requirements />
-
-      {/* Footer */}
-      <Footer />
-
-      {/* Botón de WhatsApp */}
-      <WhatsAppButton />
-    </main>
+        <Footer />
+        <WhatsAppButton />
+      </main>
+    </Router>
   )
 }
 
