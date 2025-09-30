@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* LINKS + SEARCH (Desktop) */}
         <div className="hidden md:flex items-center space-x-10 text-lg font-semibold relative">
-          <a href="/inicio" className="nav-link">Inicio</a>
+          <a href="/" className="nav-link">Inicio</a>
 
           {/* Dropdown Programas */}
           <div className="group relative">
@@ -74,8 +74,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="/nosotros" className="nav-link">Nosotros</a>
-          <a href="/contacto" className="nav-link">Contacto</a>
+          <a href="/Nosotros" className="nav-link">Nosotros</a>
+          <a href="/Contact" className="nav-link">Contacto</a>
 
           {/* BARRA DE BÚSQUEDA */}
           <input

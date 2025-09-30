@@ -13,8 +13,11 @@ import Requirements from './components/inicio/Requirements.jsx'
 import Reasons from './components/inicio/Reasons.jsx'
 import Stats from './components/inicio/Stats.jsx'
 
+
 // Pages
 import AllCourses from './AllCourses.jsx'
+import Contact from './Contact.jsx'
+import Nosotros from './Nosotros.jsx'
 
 function App() {
   return (
@@ -37,6 +40,8 @@ function App() {
 
           {/* All Courses Page */}
           <Route path='/AllCourses' element={<AllCourses />} />
+          <Route path='/Contacts' element={<Contact />} />
+          <Route path='/Nosotros' element={<Nosotros />} />
         </Routes>
 
         <Footer />

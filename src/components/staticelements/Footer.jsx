@@ -1,4 +1,5 @@
 import React from "react";
+import {FiFacebook, FiInstagram} from 'react-icons/fi'
 
 const Footer = () => {
   return (
@@ -86,23 +87,11 @@ const Footer = () => {
 
         {/* Redes sociales */}
         <div className="flex justify-center space-x-6 mt-10">
-          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-teal-400 hover:text-black transition">
-            {/* Facebook SVG */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5.006 3.676 9.127 8.438 9.879v-6.988h-2.54v-2.89h2.54V9.797c0-2.506 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.324 21.127 22 17.006 22 12z"/>
-            </svg>
+          <a href="https://www.facebook.com/profile.php?id=61555843080818" className="bg-white/10 p-3 rounded-full hover:bg-teal-400 hover:text-black transition">
+            <FiFacebook className="w-5 h-5" />
           </a>
-          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-pink-400 hover:text-black transition">
-            {/* Instagram */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07..."/>
-            </svg>
-          </a>
-          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-red-500 hover:text-black transition">
-            {/* YouTube */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M19.615 3.184c.852.23 1.52.897..."/>
-            </svg>
+          <a href="https://www.instagram.com/fundsamcorporacion?utm_source=ig_web_button_share_sheet&igsh=OWlmZTA2N3Q4OXIx" className="bg-white/10 p-3 rounded-full hover:bg-pink-400 hover:text-black transition">
+            <FiInstagram className="w-5 h-5" />
           </a>
         </div>
 
