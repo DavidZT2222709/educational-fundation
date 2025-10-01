@@ -9,7 +9,11 @@ const programas = [
   { id: 5, titulo: "Asistente administrativo", semanas: "20 Semanas", clases: "20 Clases", imagen: "https://www.polisura.edu.co/wp-content/uploads/2024/07/auxiliar-administrativo.jpg" },
   { id: 6, titulo: "Auxiliar en Enfermería", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://essaeformacion.com/wp-content/uploads/2021/11/AUXILIAR-DE-ENFERMERIA.jpg" },
   { id: 7, titulo: "Belleza y Estética", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://drtestetica.com/wp-content/uploads/2023/08/Estetica-integral-y-cosmetologia-para-la-belleza-DRT.jpg" },
-  { id: 8, titulo: "Belleza y Estética", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://drtestetica.com/wp-content/uploads/2023/08/Estetica-integral-y-cosmetologia-para-la-belleza-DRT.jpg" },
+  { id: 8, titulo: "Auxiliar En Enfermería", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://www.itep.es/sites/itep/files/styles/blog_desktop/public/images/blog/Img_post-blog_auxiliar_enfermeria%402x.jpg?itok=xH-reT80" },
+  { id: 9, titulo: "Maquinaria Pesada", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://inoxidablesvictoria.com/wp-content/uploads/2023/10/operador-posando-al-frente-de-la-maquinaria-pesada-que-conduce.jpg"},
+  { id: 10, titulo: "Seguridad Ocupacional", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://cdn.prod.website-files.com/6360d0b8798bc2249104a104/658b47484539bfecd2896d41_seguridad%20ocupacional.jpg" },
+  { id: 11, titulo: "Administración en Salud", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://global.tiffin.edu/img/article/importancia-de-la-administracion-de-los-servicios-de-salud.webp" },
+  { id: 12, titulo: "Auxiliar en Farmacia", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://centroinca.com/centroinca/wp-content/uploads/2021/03/Farmacea.jpg" },
 ];
 
 const Programas = () => {

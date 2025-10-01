@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logof.png";
 import "./Navbar.css"; // Importamos los estilos personalizados
+import { FiHome, FiBook, FiUsers, FiPhone, FiMenu, FiX, FiSearch } from "react-icons/fi";
 {/*import AllCourses from "../../AllCourses";*/}
 
 const Navbar = () => {
@@ -28,7 +29,9 @@ const Navbar = () => {
           <span className="font-bold text-xl md:text-2xl tracking-wide leading-tight">
             {/* Vista desktop */}
             <span className="hidden md:inline">
-              Fundación Social Educativa Sueños de Amor
+              Fundación Social Educativa 
+              <br/>
+              Sueños de Amor
             </span>
             {/* Vista móvil */}
             <span className="block md:hidden">
@@ -41,11 +44,17 @@ const Navbar = () => {
 
         {/* LINKS + SEARCH (Desktop) */}
         <div className="hidden md:flex items-center space-x-10 text-lg font-semibold relative">
-          <a href="/" className="nav-link">Inicio</a>
+          <a href="/" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiHome className="text-lg" />
+            <span className="font-bold uppercase">Inicio</span>
+          </a>
 
           {/* Dropdown Programas */}
           <div className="group relative">
-            <button className="nav-link">Programas</button>
+            <a href="/AllCourses" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+              <FiBook className="text-lg" />
+              <span className="font-bold uppercase">PROGRAMAS</span>
+            </a>
 
             {/* Submenú principal */}
             <div className="absolute left-0 mt-2 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
@@ -74,8 +83,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="/Nosotros" className="nav-link">Nosotros</a>
-          <a href="/Contact" className="nav-link">Contacto</a>
+          <a href="/Nosotros" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiUsers className="text-lg" />
+            <span className="font-bold uppercase">NOSOTROS</span>
+          </a>
+          
+          <a href="/Contact" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiPhone className="text-lg" />
+            <span className="font-bold uppercase">CONTACTO</span>
+          </a>
 
           {/* BARRA DE BÚSQUEDA */}
           <input
@@ -87,7 +103,7 @@ const Navbar = () => {
 
         {/* BOTÓN MENU MOBILE */}
         <button onClick={toggleMobileMenu} className="md:hidden text-3xl p-2 z-50">
-          <span className="material-symbols-outlined">menu</span>
+          <FiMenu />
         </button>
 
         {/* MENU MOBILE */}
@@ -98,20 +114,36 @@ const Navbar = () => {
         >
           {/* Botón cerrar */}
           <button onClick={closeMenu} className="absolute top-4 right-4 text-3xl">
-            <span className="material-symbols-outlined">close</span>
+            <FiX />
           </button>
 
-          <a onClick={closeMenu} href="/inicio" className="nav-link">Inicio</a>
-          <a onClick={closeMenu} href="/programas" className="nav-link">Programas</a>
-          <a onClick={closeMenu} href="/nosotros" className="nav-link">Nosotros</a>
-          <a onClick={closeMenu} href="/contacto" className="nav-link">Contacto</a>
+          <a onClick={closeMenu} href="/" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiHome className="text-lg" />
+            <span className="font-bold uppercase">Inicio</span>
+          </a>
+
+          <a onClick={closeMenu} href="/AllCourses" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiBook className="text-lg" />
+            <span className="font-bold uppercase">Programas</span>
+          </a>
+
+          <a onClick={closeMenu} href="/Nosotros" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiUsers className="text-lg" />
+            <span className="font-bold uppercase">Nosotros</span>
+          </a>
+
+          <a onClick={closeMenu} href="/Contact" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+            <FiPhone className="text-lg" />
+            <span className="font-bold uppercase">Contacto</span>
+          </a>
 
           {/* Búsqueda en móvil */}
+
           <input
             type="text"
             placeholder="Buscar..."
             className="px-4 py-2 rounded-full text-black w-56 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          />
+            />
         </nav>
       </div>
     </nav>

@@ -5,7 +5,7 @@ import Footer from './components/staticelements/Footer'
 const AllCourses = () => {
   return (
     <main>
-        
+        <h1>Hola</h1>
     </main>
   )
 }
