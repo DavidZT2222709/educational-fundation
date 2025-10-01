@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './components/staticelements/Navbar'
-import Footer from './components/staticelements/Footer'
+import Navbar from '../staticelements/Navbar'
+import Footer from '../staticelements/Footer'
 
 const AllCourses = () => {
   return (

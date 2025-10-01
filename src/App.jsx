@@ -15,9 +15,9 @@ import Stats from './components/inicio/Stats.jsx'
 
 
 // Pages
-import AllCourses from './AllCourses.jsx'
-import Contact from './Contact.jsx'
-import Nosotros from './Nosotros.jsx'
+import AllCourses from './components/pages/AllCourses.jsx'
+import Contact from './components/pages/Contact.jsx'
+import Nosotros from './components/pages/Nosotros.jsx'
 
 function App() {
   return (
