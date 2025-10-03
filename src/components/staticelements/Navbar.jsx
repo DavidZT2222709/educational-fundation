@@ -53,44 +53,70 @@ const Navbar = () => {
           <div className="group relative">
             <a href="/AllCourses" className="nav-link flex items-center space-x-2 hover:text-gray-200">
               <FiBook className="text-lg" />
-              <span className="font-bold uppercase">PROGRAMAS</span>
+              <span className="font-bold uppercase">Programas</span>
             </a>
 
-            {/* Submenú principal */}
-            <div className="absolute left-0 mt-2 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
-              
-              {/* Bachillerato */}
-              <div className="group relative">
-                <a href="/AllCourses" className="dropdown-link">Bachillerato ▸</a>
-                {/* Submenú de Bachillerato */}
-                <div className="absolute left-full top-0 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
-                  <a href="/curso1" className="dropdown-item">Curso 1</a>
-                  <a href="/curso2" className="dropdown-item">Curso 2</a>
-                  <a href="/curso3" className="dropdown-item">Curso 3</a>
-                </div>
+            {/* Mega Menú */}
+            <div className="absolute left-0 mt-4 w-[700px] bg-white text-[#004AAD] shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 -translate-y-3 transition-all duration-500 ease-in-out p-6 grid grid-cols-2 md:grid-cols-3 gap-6 z-50">
+    
+              {/* Columna 1 */}
+              <div>
+                <h3 className="font-bold text-[#004AAD] mb-3 border-b pb-1">Carreras Técnicas</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/enfermeria" className="hover:text-yellow-500 transition">Auxiliar en Enfermería</a></li>
+                  <li><a href="/farmacia" className="hover:text-yellow-500 transition">Auxiliar en Farmacia</a></li>
+                  <li><a href="/salud" className="hover:text-yellow-500 transition">Administración en Salud</a></li>
+                  <li><a href="/seguridad" className="hover:text-yellow-500 transition">Seguridad Ocupacional</a></li>
+                </ul>
               </div>
 
-              {/* Carreras técnicas */}
-              <div className="group relative">
-                <a href="/AllCourses" className="dropdown-link">Carreras Técnicas ▸</a>
-                {/* Submenú de Carreras Técnicas */}
-                <div className="absolute left-full top-0 w-56 bg-white text-[#004AAD] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
-                  <a href="/carrera1" className="dropdown-item">Carrera 1</a>
-                  <a href="/carrera2" className="dropdown-item">Carrera 2</a>
-                  <a href="/carrera3" className="dropdown-item">Carrera 3</a>
-                </div>
+              {/* Columna 2 */}
+              <div>
+                <h3 className="font-bold text-[#004AAD] mb-3 border-b pb-1">Formación Complementaria</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/computadores" className="hover:text-yellow-500 transition">Operador de Computadores</a></li>
+                  <li><a href="/contable" className="hover:text-yellow-500 transition">Auxiliar Contable y Financiero</a></li>
+                  <li><a href="/administrativo" className="hover:text-yellow-500 transition">Asistente Administrativo</a></li>
+                  <li><a href="/ingles" className="hover:text-yellow-500 transition">Inglés por Niveles</a></li>
+                </ul>
+              </div>
+
+              {/* Columna 3 */}
+              <div>
+                <h3 className="font-bold text-[#004AAD] mb-3 border-b pb-1">Otros Programas</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/belleza" className="hover:text-yellow-500 transition">Belleza y Peluquería</a></li>
+                  <li><a href="/maquinaria" className="hover:text-yellow-500 transition">Maquinaria Pesada</a></li>
+                  <li><a href="/homecare" className="hover:text-yellow-500 transition">Home Care</a></li>
+                  <li><a href="/primera-infancia" className="hover:text-yellow-500 transition">Atención a la Primera Infancia</a></li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <a href="/Nosotros" className="nav-link flex items-center space-x-2 hover:text-gray-200">
-            <FiUsers className="text-lg" />
-            <span className="font-bold uppercase">NOSOTROS</span>
-          </a>
-          
+          <div className="group relative">
+            <a href="/Nosotros" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+              <FiUsers className="text-lg" />
+              <span className="font-bold uppercase">Fundación</span>
+            </a>
+
+            {/* Mega Menú */}
+            <div className="absolute left-0 mt-4 w-72 bg-white text-[#004AAD] shadow-2xl rounded-xl opacity-0 invisible 
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 -translate-y-3 
+                  transition-all duration-500 ease-in-out p-6 flex flex-col space-y-3 z-50">
+
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Nosotros</a>
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Misión</a>
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Visión</a>
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Certificados</a>
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Certificado MinEducación</a>
+                <a href="/Nosotros" className="hover:text-yellow-500 transition">Certificado RUT</a>
+              </div>
+          </div>
+
           <a href="/Contact" className="nav-link flex items-center space-x-2 hover:text-gray-200">
             <FiPhone className="text-lg" />
-            <span className="font-bold uppercase">CONTACTO</span>
+            <span className="font-bold uppercase">Contacto</span>
           </a>
 
           {/* BARRA DE BÚSQUEDA */}
