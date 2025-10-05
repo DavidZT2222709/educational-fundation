@@ -1,12 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion"; 
 import { FaUserTie, FaBullseye, FaEye, FaCertificate, FaBalanceScale } from "react-icons/fa";
+import fondo from "../../../public/fondo.jpg";
 
 const Nosotros = () => {
   return (
     <div className="bg-gray-50 text-gray-900">
       {/* HERO */}
-      <section className="relative h-[60vh] flex items-center justify-center text-center bg-gray-300">
+      <section 
+        className="relative h-[60vh] flex items-center justify-center text-center bg-gray-300"
+        style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+       
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#004AAD]/70"></div>
         <div className="relative z-10 px-6">

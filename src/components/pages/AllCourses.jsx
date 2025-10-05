@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../staticelements/Navbar'
-import Footer from '../staticelements/Footer'
 
 const AllCourses = () => {
   return (
