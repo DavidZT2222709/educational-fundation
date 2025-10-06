@@ -12,6 +12,7 @@ import Testimonials from './components/inicio/Testimonials.jsx'
 import Requirements from './components/inicio/Requirements.jsx'
 import Reasons from './components/inicio/Reasons.jsx'
 import Stats from './components/inicio/Stats.jsx'
+import Mapa from './components/inicio/Mapa.jsx'
 
 
 // Pages
@@ -35,6 +36,7 @@ function App() {
               <Requirements />
               <Reasons />
               <Stats />
+              <Mapa />
             </>
           } />
 
