@@ -91,7 +91,7 @@ const Navbar = () => {
           {/* MENU PROGRAMAS */}
           <div className="group relative">
             <a
-              href="/all-courses"
+              href="AllCourses"
               className="nav-link flex items-center space-x-2 hover:text-gray-200"
             >
               <FiBook className="text-lg" />
@@ -109,7 +109,7 @@ const Navbar = () => {
                   {carreras_tecnicas.map((titulo, i) => (
                     <li key={i}>
                       <a
-                        href={`/all-courses?tipo=tecnicas&curso=${encodeURIComponent(
+                        href={`/AllCourses?tipo=tecnicas&curso=${encodeURIComponent(
                           titulo
                         )}`}
                         className="hover:text-yellow-500 transition"
@@ -130,7 +130,7 @@ const Navbar = () => {
                   {cursos_cortos.map((titulo, i) => (
                     <li key={i}>
                       <a
-                        href={`/all-courses?tipo=cortos&curso=${encodeURIComponent(
+                        href={`/AllCourses-?tipo=cortos&curso=${encodeURIComponent(
                           titulo
                         )}`}
                         className="hover:text-yellow-500 transition"
@@ -151,7 +151,7 @@ const Navbar = () => {
                   {cursos_certificados.map((titulo, i) => (
                     <li key={i}>
                       <a
-                        href={`/all-courses?tipo=certificados&curso=${encodeURIComponent(
+                        href={`/AllCourses?tipo=certificados&curso=${encodeURIComponent(
                           titulo
                         )}`}
                         className="hover:text-yellow-500 transition"
@@ -239,7 +239,7 @@ const Navbar = () => {
             <span className="font-bold uppercase">Inicio</span>
           </a>
 
-          <a onClick={closeMenu} href="/all-courses" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+          <a onClick={closeMenu} href="/AllCourses" className="nav-link flex items-center space-x-2 hover:text-gray-200">
             <FiBook className="text-lg" />
             <span className="font-bold uppercase">Programas</span>
           </a>
