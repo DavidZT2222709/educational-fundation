@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import logo from "../../assets/logof.png"; // Ajusta la ruta a tu logo
+import logo from "../../assets/logof.png";
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Hero = () => {
   const [form, setForm] = useState({
     nombre: "",
     correo: "",
-    programa: "",
+    telefono: "",
+    mensaje: "",
   });
+
+  const [captchaValido, setCaptchaValido] = useState(false);
+
+  const handleCaptcha = (value) => {
+    console.log("Captcha value:", value);
+    if (value) setCaptchaValido(true);
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,8 +24,37 @@ const Hero = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Datos enviados:", form);
-    alert("Tu información fue enviada. Pronto te contactaremos.");
+
+    if (!captchaValido) {
+      alert("⚠️ Por favor verifica el reCAPTCHA antes de enviar.");
+      return;
+    }
+
+    const serviceID = "ervice_fyjolrb";
+    const templateID = "template_hv5ydq2";
+    const userID = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const templateParams = {
+      nombre: form.nombre,
+      correo: form.correo,
+      telefono: form.telefono,
+      mensaje: form.mensaje,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then(
+        (response) => {
+          console.log("Correo enviado exitosamente!", response.status, response.text);
+          alert("✅ Tu información fue enviada correctamente. ¡Pronto te contactaremos!");
+          setForm({ nombre: "", correo: "", telefono: "", mensaje: "" });
+          setCaptchaValido(false);
+        },
+        (err) => {
+          console.error("Error al enviar el correo:", err);
+          alert("❌ Hubo un error al enviar tu información. Por favor, intenta nuevamente.");
+        }
+      );
   };
 
   return (
@@ -55,7 +94,6 @@ const Hero = () => {
 
           {/* BOTONES CON EFECTO ANIMADO */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            {/* Botón amarillo */}
             <a
               href="/inscripciones"
               className="
@@ -71,7 +109,6 @@ const Hero = () => {
               Ir a Inscripciones
             </a>
 
-            {/* Botón azul translúcido */}
             <a
               href="/programas"
               className="
@@ -114,23 +151,32 @@ const Hero = () => {
               required
               className="w-full border px-4 py-2 rounded-lg"
             />
-            <select
-              name="programa"
-              value={form.programa}
+            <input
+              type="tel"
+              name="telefono"
+              placeholder="Tu teléfono"
+              value={form.telefono}
               onChange={handleChange}
-              required
               className="w-full border px-4 py-2 rounded-lg"
-            >
-              <option value="">Selecciona un programa</option>
-              <option>Bachillerato por ciclos</option>
-              <option>Formación en artes y oficios</option>
-              <option>Programas técnicos</option>
-              <option>Talleres de desarrollo personal</option>
-            </select>
+            />
 
-            {/* CAPTCHA SIMULADO */}
-            <div className="bg-gray-100 p-3 rounded-lg text-sm text-center">
-              [ Aquí irá el reCAPTCHA de Google ]
+            <div>
+              <label className="block text-sm font-semibold mb-1">Mensaje</label>
+              <textarea
+                name="mensaje"
+                placeholder="Tu mensaje"
+                value={form.mensaje}
+                onChange={handleChange}
+                className="w-full border px-4 py-2 rounded-lg"
+              />
+            </div>
+
+            {/* RECAPTCHA REAL */}
+            <div className="flex justify-center mt-4">
+              <ReCAPTCHA
+                sitekey = "6Lc1m-QrAAAAAM6j35VjjOHJMnhpG0b1SockghXR" // 🔑 Pega tu clave pública de reCAPTCHA aquí
+                onChange={handleCaptcha}
+              />
             </div>
 
             <button
@@ -142,7 +188,7 @@ const Hero = () => {
           </form>
         </div>
 
-        {/* COLUMNA DERECHA: LOGO CON EFECTO */}
+        {/* COLUMNA DERECHA: LOGO */}
         <div className="flex justify-center items-center">
           <img
             src={logo}

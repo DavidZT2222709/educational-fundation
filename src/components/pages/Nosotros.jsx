@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion"; 
 import { FaUserTie, FaBullseye, FaEye, FaCertificate, FaBalanceScale } from "react-icons/fa";
-import fondo from "../../../public/fondo.jpg";
+import fondo from "../../assets/fondo.jpg";
 import equipo from "../../assets/nosotros-image-1.jpg";
 import team2 from "../../assets/nosotros-image-2.jpg";
 

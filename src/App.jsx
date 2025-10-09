@@ -42,7 +42,7 @@ function App() {
 
           {/* All Courses Page */}
           <Route path='/AllCourses' element={<AllCourses />} />
-          <Route path='/Contacts' element={<Contact />} />
+          <Route path='/Contact' element={<Contact />} />
           <Route path='/Nosotros' element={<Nosotros />} />
         </Routes>
 
