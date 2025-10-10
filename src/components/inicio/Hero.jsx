@@ -174,7 +174,7 @@ const Hero = () => {
             {/* RECAPTCHA REAL */}
             <div className="flex justify-center mt-4">
               <ReCAPTCHA
-                sitekey = "6Lc1m-QrAAAAACQLlGbLqv3pJ3YYhGElEbDo7ZA" // 🔑 Pega tu clave pública de reCAPTCHA aquí
+                sitekey = {import.meta.env.VITE_RECAPTCHA_SITE_KEY} // 🔑 Pega tu clave pública de reCAPTCHA aquí
                 onChange={handleCaptcha}
               />
             </div>
