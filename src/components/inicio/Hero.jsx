@@ -30,7 +30,7 @@ const Hero = () => {
       return;
     }
 
-    const serviceID = "ervice_fyjolrb";
+    const serviceID = "service_fyjolrb";
     const templateID = "template_hv5ydq2";
     const userID = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
