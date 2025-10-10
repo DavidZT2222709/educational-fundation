@@ -180,7 +180,7 @@ const Contacto = () => {
                 <div className="flex justify-center my-4">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6Lc1m-QrAAAAAM6j35VjjOHJMnhpG0b1SockghXR" // 🔑 Pega tu clave pública de reCAPTCHA aquí
+                    sitekey="6Lc1m-QrAAAAACQLlGbLqv3pJ3YYhGElEbDo7ZA" // 🔑 Pega tu clave pública de reCAPTCHA aquí
                     onChange={(token) => setCaptchaToken(token)}
                     onExpired={() => setCaptchaToken(null)}
                   />
