@@ -5,13 +5,13 @@
   "type": "module",
   "homepage": "https://davidzt2222709.github.io/educational-fundation/",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
+  "deploy": "gh-pages -d dist",
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "chart.js": "^4.5.0",
