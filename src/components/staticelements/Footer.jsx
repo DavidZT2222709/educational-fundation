@@ -4,30 +4,6 @@ import {FiFacebook, FiInstagram} from 'react-icons/fi'
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-b from-[#002F6C] via-[#004AAD] to-[#0066CC] text-white">
-      {/* Onda decorativa arriba */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-        <svg
-          className="relative block w-full h-10"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1200 120"
-        >
-          <path
-            d="M0,0V46.29c47.79,22,103.59,29,158,17.39C230,51,284,15,339,1.49,423-19.39,508,10,593,26.92c92,18.59,185,22.59,278,3.7,55-11.41,109-31.41,164-32.41s109,17,165,35V0Z"
-            opacity=".25"
-            className="fill-white"
-          ></path>
-          <path
-            d="M0,0V15.81c47.79,22,103.59,29,158,17.39C230,21,284-15,339-28.51,423-49.39,508-20,593-3.08c92,18.59,185,22.59,278,3.7,55-11.41,109-31.41,164-32.41s109,17,165,35V0Z"
-            opacity=".5"
-            className="fill-white"
-          ></path>
-          <path
-            d="M0,0V5.63c47.79,22,103.59,29,158,17.39C230,11,284-25,339-38.51,423-59.39,508-30,593-13.08c92,18.59,185,22.59,278,3.7,55-11.41,109-31.41,164-32.41s109,17,165,35V0Z"
-            className="fill-white"
-          ></path>
-        </svg>
-      </div>
 
       <div className="container mx-auto px-6 pt-16 pb-10 relative z-10">
         {/* Encabezado */}

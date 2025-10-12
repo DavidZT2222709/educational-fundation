@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../../assets/logof.png";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -81,8 +82,18 @@ const Hero = () => {
       {/* CONTENIDO */}
       <div className="relative z-10 container mx-auto px-8 py-12 grid md:grid-cols-2 gap-12 min-h-screen">
         {/* COLUMNA IZQUIERDA */}
-        <div className="flex flex-col justify-center space-y-10 max-w-xl mx-auto text-white">
-          <div className="space-y-6 text-center md:text-left">
+        <motion.div
+          className="flex flex-col justify-center space-y-10 max-w-xl mx-auto text-white"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <motion.div
+            className="space-y-6 text-center md:text-left"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-wide">
               Fundación Social Educativa <br />
               <span className="text-yellow-300">Sueños de Amor (FUNDSAM)</span>
@@ -90,12 +101,17 @@ const Hero = () => {
             <p className="text-lg md:text-xl">
               Transformando vidas a través de la educación y el acompañamiento social.
             </p>
-          </div>
+          </motion.div>
 
           {/* BOTONES CON EFECTO ANIMADO */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
             <a
-              href="/inscripciones"
+              href="/Contact"
               className="
                 relative overflow-hidden px-6 py-3 rounded-full font-semibold text-white bg-yellow-500 
                 shadow-md text-center transition-transform duration-500
@@ -110,7 +126,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/programas"
+              href="/AllCourses"
               className="
                 relative overflow-hidden px-6 py-3 rounded-full font-semibold text-white bg-white/20 backdrop-blur-md 
                 shadow-md text-center transition-transform duration-500
@@ -123,12 +139,15 @@ const Hero = () => {
             >
               Ver Programas
             </a>
-          </div>
+          </motion.div>
 
           {/* FORMULARIO */}
-          <form
+          <motion.form
             onSubmit={handleSubmit}
             className="bg-white p-6 rounded-2xl shadow-lg space-y-4 text-gray-800 max-w-md mx-auto md:mx-0"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
           >
             <h3 className="text-xl font-bold mb-2 text-center text-[#004AAD]">
               Inscríbete aquí
@@ -171,10 +190,9 @@ const Hero = () => {
               />
             </div>
 
-            {/* RECAPTCHA REAL */}
             <div className="flex justify-center mt-4">
               <ReCAPTCHA
-                sitekey = {import.meta.env.VITE_RECAPTCHA_SITE_KEY} // 🔑 Pega tu clave pública de reCAPTCHA aquí
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 onChange={handleCaptcha}
               />
             </div>
@@ -185,11 +203,16 @@ const Hero = () => {
             >
               Enviar información
             </button>
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
 
         {/* COLUMNA DERECHA: LOGO */}
-        <div className="flex justify-center items-center">
+        <motion.div
+          className="flex justify-center items-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
+        >
           <img
             src={logo}
             alt="Logo Fundación"
@@ -200,7 +223,7 @@ const Hero = () => {
               hover:scale-110 hover:rotate-3
             "
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

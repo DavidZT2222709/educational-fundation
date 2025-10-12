@@ -7,6 +7,7 @@ import {
   FaTimesCircle,
 } from "react-icons/fa";
 import { FiLayers } from "react-icons/fi";
+import { motion } from "framer-motion"; // 🧠 Importamos Framer Motion
 
 const AllCourses = () => {
   const [tipoSeleccionado, setTipoSeleccionado] = useState("carreras");
@@ -18,12 +19,10 @@ const AllCourses = () => {
     const tipo = params.get("tipo");
     const curso = params.get("curso");
 
-    // Selecciona el tipo de lista
     if (tipo === "tecnicas") setTipoSeleccionado("carreras");
     else if (tipo === "cortos") setTipoSeleccionado("cursos");
     else if (tipo === "certificados") setTipoSeleccionado("certificados");
 
-    // Si viene un curso, busca y abre el modal automáticamente
     if (curso) {
       const decodedCurso = decodeURIComponent(curso).trim();
       setTimeout(() => {
@@ -39,7 +38,6 @@ const AllCourses = () => {
         );
         if (encontrado) {
           setSeleccionado(encontrado);
-          // Opcional: scroll al modal
           setTimeout(() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }, 200);
@@ -83,7 +81,6 @@ const AllCourses = () => {
     { id: 10, titulo: "Atención a Víctimas con Agentes Químicos", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://grupokion.com/wp-content/uploads/2022/04/seguridad-laboral.jpg" },
   ];
 
-  // 🧠 Selección dinámica según el tipo
   const datos =
     tipoSeleccionado === "carreras"
       ? carreras_tecnicas
@@ -92,9 +89,19 @@ const AllCourses = () => {
       : cursos_certificados;
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-32 pb-20">
+    <motion.section
+      className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-32 pb-20"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       {/* 🔹 Encabezado */}
-      <div className="text-center mb-12">
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <h1 className="text-4xl font-extrabold text-blue-800 mb-3 flex justify-center items-center gap-2">
           <FiLayers className="text-blue-600 text-4xl" />
           Programas Académicos
@@ -102,10 +109,15 @@ const AllCourses = () => {
         <p className="text-gray-600">
           Explora nuestras carreras técnicas, cursos cortos y certificados
         </p>
-      </div>
+      </motion.div>
 
       {/* 🔹 Filtro */}
-      <div className="flex justify-center mb-12 gap-4 flex-wrap">
+      <motion.div
+        className="flex justify-center mb-12 gap-4 flex-wrap"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
         <button
           onClick={() => setTipoSeleccionado("carreras")}
           className={`flex items-center gap-2 px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
@@ -138,25 +150,33 @@ const AllCourses = () => {
         >
           <FaCertificate /> Cursos Certificados
         </button>
-      </div>
+      </motion.div>
 
-      {/* 🔹 Grid */}
-      <div className="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3 px-6">
+      {/* 🔹 Grid con animación */}
+      <motion.div
+        className="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3 px-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.1 },
+          },
+        }}
+      >
         {datos.map((item) => (
-          <div
+          <motion.div
             key={item.id}
             onClick={() => setSeleccionado(item)}
             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transform transition-all duration-300 cursor-pointer border border-blue-100"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
-            <img
-              src={item.imagen}
-              alt={item.titulo}
-              className="h-52 w-full object-cover"
-            />
+            <img src={item.imagen} alt={item.titulo} className="h-52 w-full object-cover" />
             <div className="p-6 flex flex-col justify-between h-[180px]">
-              <h3 className="text-xl font-bold text-blue-800 mb-2">
-                {item.titulo}
-              </h3>
+              <h3 className="text-xl font-bold text-blue-800 mb-2">{item.titulo}</h3>
               <p className="text-gray-600 flex items-center gap-2 text-sm">
                 <FaClock className="text-blue-600" /> {item.semanas}
               </p>
@@ -167,14 +187,19 @@ const AllCourses = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* 🔹 Modal */}
       {seleccionado && (
         <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl shadow-2xl w-[90%] max-w-lg p-8 relative animate-fadeIn">
+          <motion.div
+            className="bg-white rounded-3xl shadow-2xl w-[90%] max-w-lg p-8 relative"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
             <button
               onClick={() => setSeleccionado(null)}
               className="absolute top-4 right-4 text-gray-600 hover:text-red-500 transition"
@@ -182,24 +207,13 @@ const AllCourses = () => {
               <FaTimesCircle size={24} />
             </button>
 
-            <img
-              src={seleccionado.imagen}
-              alt={seleccionado.titulo}
-              className="rounded-2xl mb-5 h-48 w-full object-cover"
-            />
-            <h2 className="text-2xl font-bold text-blue-800 mb-3">
-              {seleccionado.titulo}
-            </h2>
-            <p className="text-gray-700 mb-2">
-              <strong>Duración:</strong> {seleccionado.semanas}
-            </p>
-            <p className="text-gray-700 mb-4">
-              <strong>Clases:</strong> {seleccionado.clases}
-            </p>
+            <img src={seleccionado.imagen} alt={seleccionado.titulo} className="rounded-2xl mb-5 h-48 w-full object-cover" />
+            <h2 className="text-2xl font-bold text-blue-800 mb-3">{seleccionado.titulo}</h2>
+            <p className="text-gray-700 mb-2"><strong>Duración:</strong> {seleccionado.semanas}</p>
+            <p className="text-gray-700 mb-4"><strong>Clases:</strong> {seleccionado.clases}</p>
             <p className="text-gray-600 leading-relaxed">
-              Este curso está diseñado para brindarte una formación completa y
-              certificada en <b>{seleccionado.titulo}</b>, con clases
-              teórico-prácticas impartidas por profesionales expertos.
+              Este curso está diseñado para brindarte una formación completa y certificada en{" "}
+              <b>{seleccionado.titulo}</b>, con clases teórico-prácticas impartidas por profesionales expertos.
             </p>
 
             <div className="mt-6 text-right">
@@ -210,10 +224,10 @@ const AllCourses = () => {
                 Cerrar
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
-    </section>
+    </motion.section>
   );
 };
 
