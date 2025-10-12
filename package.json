@@ -3,10 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://davidzt2222709.github.io/educational-fundation/",
   "scripts": {
-  "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
-  "deploy": "gh-pages -d dist",
   "dev": "vite",
   "build": "vite build",
   "lint": "eslint .",

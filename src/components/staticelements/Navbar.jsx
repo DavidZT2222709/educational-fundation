@@ -74,7 +74,7 @@ const Navbar = () => {
           </a>
 
           {/* EDUCACIÓN BÁSICA */}
-          <a href="/educational-fundation/Basiceducation" className="nav-link flex items-center space-x-2 hover:text-gray-200">
+          <a href="/Basiceducation" className="nav-link flex items-center space-x-2 hover:text-gray-200">
             <FaChild className="text-lg" />
             <span className="font-bold uppercase">Educación Básica</span>
           </a>
