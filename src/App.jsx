@@ -25,7 +25,7 @@ import Basiceducation from './components/pages/Basiceducation.jsx'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/educational-fundation">
       <main>
         <Navbar />
 
