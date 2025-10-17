@@ -5,6 +5,7 @@ import Navbar from './components/staticelements/Navbar.jsx'
 import Footer from './components/staticelements/Footer.jsx'
 import WhatsAppButton from './components/staticelements/WhatsAppButton.jsx'
 import ScrollToTopButton from './components/staticelements/ScrollToTopButtom.jsx'
+import Chat from './components/staticelements/Chat.jsx'
 
 //Sections
 import Hero from './components/inicio/Hero.jsx'
@@ -53,6 +54,7 @@ function App() {
 
         <Footer />
         <ScrollToTopButton />
+        <Chat />
         <WhatsAppButton />
       </main>
     </Router>
