@@ -21,11 +21,6 @@ const Navbar = () => {
     "Auxiliar en Enfermería",
     "Auxiliar de Farmacia",
     "Auxiliar Administrativo en Salud",
-    "Auxiliar en Primera Infancia",
-    "Operador en Maquinaria Pesada",
-    "Auxiliar en Seguridad Ocupacional",
-    "Auxiliar Administrativo",
-    "Home Care (Cuidado en Casa)",
   ];
 
   const cursos_cortos = [
@@ -41,12 +36,6 @@ const Navbar = () => {
     "AIEPI",
     "Humanización",
     "Gestión del Duelo",
-    "Seguridad al Paciente",
-    "Combo Primeros Auxilios",
-    "Vacunación",
-    "Atención a Víctimas de Violencia Sexual",
-    "Toma de Muestras de Laboratorio Clínico",
-    "Atención a Víctimas con Agentes Químicos",
   ];
 
   return (
@@ -111,6 +100,16 @@ const Navbar = () => {
                     </li>
                   ))}
                 </ul>
+                <ul className="space-y-2 text-sm underline">
+                  <li>
+                    <a
+                      href={'/AllCourses'}
+                      className="hover:text-yellow-500 transition"
+                    >
+                      Mas Carreras Tecnicas ➝
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               {/* Cortos */}
@@ -128,6 +127,16 @@ const Navbar = () => {
                     </li>
                   ))}
                 </ul>
+                <ul className="space-y-2 text-sm underline">
+                  <li>
+                    <a
+                      href={'/AllCourses'}
+                      className="hover:text-yellow-500 transition"
+                    >
+                      Mas Cursos Cortos ➝
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               {/* Certificados */}
@@ -144,6 +153,16 @@ const Navbar = () => {
                       </a>
                     </li>
                   ))}
+                </ul>
+                <ul className="space-y-2 text-sm underline">
+                  <li>
+                    <a
+                      href={'/AllCourses'}
+                      className="hover:text-yellow-500 transition"
+                    >
+                      Mas Certificados ➝
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

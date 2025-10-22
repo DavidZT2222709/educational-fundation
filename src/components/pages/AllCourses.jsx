@@ -48,37 +48,165 @@ const AllCourses = () => {
 
   // 🧩 Carreras Técnicas
   const carreras_tecnicas = [
-    { id: 1, titulo: "Auxiliar en Enfermería", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://essaeformacion.com/wp-content/uploads/2021/11/AUXILIAR-DE-ENFERMERIA.jpg" },
-    { id: 2, titulo: "Auxiliar de Farmacia", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://centroinca.com/centroinca/wp-content/uploads/2021/03/Farmacea.jpg" },
-    { id: 3, titulo: "Auxiliar Administrativo en Salud", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://global.tiffin.edu/img/article/importancia-de-la-administracion-de-los-servicios-de-salud.webp" },
-    { id: 4, titulo: "Auxiliar en Primera Infancia", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://www.comfenalcovalle.com.co/wp-content/uploads/2023/11/primera-infancia.webp" },
-    { id: 5, titulo: "Operador en Maquinaria Pesada", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://inoxidablesvictoria.com/wp-content/uploads/2023/10/operador-posando-al-frente-de-la-maquinaria-pesada-que-conduce.jpg" },
-    { id: 6, titulo: "Auxiliar en Seguridad Ocupacional", semanas: "30 Semanas", clases: "30 Clases", imagen: "https://cdn.prod.website-files.com/6360d0b8798bc2249104a104/658b47484539bfecd2896d41_seguridad%20ocupacional.jpg" },
-    { id: 7, titulo: "Auxiliar Administrativo", semanas: "20 Semanas", clases: "20 Clases", imagen: "https://www.polisura.edu.co/wp-content/uploads/2024/07/auxiliar-administrativo.jpg" },
-    { id: 8, titulo: "Home Care (Cuidado en Casa)", semanas: "25 Semanas", clases: "25 Clases", imagen: "https://homecare-aid.com/wp-content/uploads/2024/04/Different-types-of-Home-Care-.jpg" },
+    { id: 1, 
+      titulo: "Auxiliar en Enfermería", 
+      semanas: "30 Semanas", 
+      clases: "30 Clases", 
+      imagen: "https://essaeformacion.com/wp-content/uploads/2021/11/AUXILIAR-DE-ENFERMERIA.jpg" 
+    },
+    { id: 2, 
+      titulo: "Auxiliar de Farmacia", 
+      semanas: "30 Semanas", 
+      clases: "30 Clases", 
+      imagen: "https://centroinca.com/centroinca/wp-content/uploads/2021/03/Farmacea.jpg" 
+    },
+    { id: 3, 
+      titulo: "Auxiliar Administrativo en Salud", 
+      semanas: "25 Semanas", 
+      clases: "25 Clases", 
+      imagen: "https://global.tiffin.edu/img/article/importancia-de-la-administracion-de-los-servicios-de-salud.webp" 
+    },
+    { id: 4, 
+      titulo: "Auxiliar en Primera Infancia", 
+      semanas: "25 Semanas", 
+      clases: "25 Clases", 
+      imagen: "https://www.comfenalcovalle.com.co/wp-content/uploads/2023/11/primera-infancia.webp" 
+    },
+    { id: 5, 
+      titulo: "Operador en Maquinaria Pesada", 
+      semanas: "30 Semanas", 
+      clases: "30 Clases", 
+      imagen: "https://inoxidablesvictoria.com/wp-content/uploads/2023/10/operador-posando-al-frente-de-la-maquinaria-pesada-que-conduce.jpg" 
+    },
+    { id: 6, 
+      titulo: "Auxiliar en Seguridad Ocupacional", 
+      semanas: "30 Semanas", 
+      clases: "30 Clases", 
+      imagen: "https://cdn.prod.website-files.com/6360d0b8798bc2249104a104/658b47484539bfecd2896d41_seguridad%20ocupacional.jpg" 
+    },
+    { id: 7, 
+      titulo: "Auxiliar Administrativo", 
+      semanas: "20 Semanas", 
+      clases: "20 Clases", 
+      imagen: "https://www.polisura.edu.co/wp-content/uploads/2024/07/auxiliar-administrativo.jpg" 
+    },
+    { id: 8, 
+      titulo: "Home Care (Cuidado en Casa)", 
+      semanas: "25 Semanas", 
+      clases: "25 Clases", 
+      imagen: "https://homecare-aid.com/wp-content/uploads/2024/04/Different-types-of-Home-Care-.jpg" 
+    },
+    { id: 9, 
+      titulo: "Belleza y Peluquería", 
+      semanas: "25 Semanas", 
+      clases: "25 Clases", 
+      imagen: "https://img.freepik.com/fotos-premium/salon-belleza-peluqueria-mujeres_170532-2138.jpg" 
+    },
+    { id: 10, 
+      titulo: "Operador de Computadoras", 
+      semanas: "25 Semanas", 
+      clases: "25 Clases", 
+      imagen: "https://institutoferrer.com/wp-content/uploads/2020/08/estudiante-enfocado-clase-informatica_13339-284872.jpg" 
+    },
+    
   ];
 
   // 🧩 Cursos Cortos
   const cursos_cortos = [
-    { id: 1, titulo: "Maquillaje Profesional", semanas: "6 Semanas", clases: "6 Clases", imagen: "https://www.cursosycarreras.com.co/blog/wp-content/uploads/2022/06/curso-de-maquillaje-profesional.jpg" },
-    { id: 2, titulo: "Uñas Acrílicas", semanas: "6 Semanas", clases: "6 Clases", imagen: "https://blog.solbeautyandcare.com/hubfs/un%CC%83as%20acri%CC%81licas%20colores.jpeg" },
-    { id: 3, titulo: "Logística y Bodegaje", semanas: "8 Semanas", clases: "8 Clases", imagen: "https://www.enycomlogistica.com.co/wp-content/uploads/2021/07/almacen-logistica.jpg" },
-    { id: 4, titulo: "Manipulación de Alimentos", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://www.seguridadalimentariasegovia.es/wp-content/uploads/2021/10/manipulacion-de-alimentos.jpg" },
-    { id: 5, titulo: "Inglés para Niños", semanas: "10 Semanas", clases: "10 Clases", imagen: "https://institutoamericanoingles.com.mx/wp-content/uploads/2021/06/ingles-para-ninos.jpg" },
+    { id: 1, 
+      titulo: "Maquillaje Profesional", 
+      semanas: "6 Semanas", 
+      clases: "6 Clases", 
+      imagen: "https://www.cemcanarias.es/wp-content/uploads/2023/02/maquillaje-y-maquillaje-profesional-1-scaled.jpg" 
+    },
+    { id: 2, 
+      titulo: "Uñas Acrílicas", 
+      semanas: "6 Semanas", 
+      clases: "6 Clases", 
+      imagen: "https://media.istockphoto.com/id/528708841/es/foto/azul-rosa-sesi%C3%B3n-de-manicura.jpg?s=612x612&w=0&k=20&c=r4IvFj8uJzC78fls_SJcYmFUp1nWkz--0o2fUHtIFVc=" 
+    },
+    { id: 3,
+      titulo: "Logística y Bodegaje", 
+      semanas: "8 Semanas", 
+      clases: "8 Clases", 
+      imagen: "https://www.polisura.edu.co/wp-content/uploads/2023/03/estudia-logistica.jpg" 
+    },
+    { id: 4, 
+      titulo: "Manipulación de Alimentos", 
+      semanas: "4 Semanas", 
+      clases: "4 Clases", 
+      imagen: "https://colombianadecursos.com/wp-content/uploads/2023/03/manipulacion-de-alimentos.jpg" 
+    },
+    { id: 5, 
+      titulo: "Inglés para Niños", 
+      semanas: "10 Semanas", 
+      clases: "10 Clases", 
+      imagen: "https://selecciones.com.mx/wp-content/uploads/2023/10/razones-del-por-que-aprender-ingles-desde-ninos.png" 
+    },
   ];
 
   // 🧩 Cursos Certificados
   const cursos_certificados = [
-    { id: 1, titulo: "Combo BLS + ACLS", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://www.lifemedic.pe/wp-content/uploads/2023/08/bls-acls.jpg" },
-    { id: 2, titulo: "AIEPI", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://www.saludcapital.gov.co/ctdlm/PublishingImages/Programa%20AIEPI.jpg" },
-    { id: 3, titulo: "Humanización", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://tecnodidactica.com/wp-content/uploads/2022/11/HUMANIZACION-SALUD.jpg" },
-    { id: 4, titulo: "Gestión del Duelo", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://clinicapsicologicavillalobos.com/wp-content/uploads/2021/05/gestion-del-duelo.jpg" },
-    { id: 5, titulo: "Seguridad al Paciente", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://www.seguridadpaciente.com.ar/wp-content/uploads/2021/04/seguridad-del-paciente.jpg" },
-    { id: 6, titulo: "Combo Primeros Auxilios", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://clinicadentalgarriga.com/wp-content/uploads/2022/01/primeros-auxilios.jpg" },
-    { id: 7, titulo: "Vacunación", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://www.clinicainternacional.com.pe/wp-content/uploads/2023/02/vacunacion.jpg" },
-    { id: 8, titulo: "Atención a Víctimas de Violencia Sexual", semanas: "3 Semanas", clases: "3 Clases", imagen: "https://cdn.euroinnova.edu.es/img/subidasEditor/atencion-victimas-violencia-sexual-online-1644316747.jpg" },
-    { id: 9, titulo: "Toma de Muestras de Laboratorio Clínico", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://hospitalregionalcusco.gob.pe/wp-content/uploads/2020/05/Laboratorio-clinico.jpg" },
-    { id: 10, titulo: "Atención a Víctimas con Agentes Químicos", semanas: "4 Semanas", clases: "4 Clases", imagen: "https://grupokion.com/wp-content/uploads/2022/04/seguridad-laboral.jpg" },
+    { id: 1, 
+      titulo: "Combo BLS + ACLS", 
+      semanas: "4 Semanas", 
+      clases: "4 Clases", 
+      imagen: "https://www.bupasalud.com/sites/default/files/styles/640_x_400/public/articulos/2024-11/fotos/que-son-primeros-auxilios-1.jpg?itok=veqNGtyW" 
+    },
+    { id: 2, 
+      titulo: "AIEPI", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://www.upb.edu.co/es/imagenes/img-estrategia-aiepi-clinico-virtual-1464270287344.jpg" 
+    },
+    { id: 3, 
+      titulo: "Humanización", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://enlinea.santotomas.cl/web/wp-content/uploads/sites/2/2021/06/team-spirit-2447163_1920-1-744x465.jpg" 
+    },
+    { id: 4, 
+      titulo: "Gestión del Duelo", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://coreservicios.com.co/wp-content/uploads/2021/01/Manejo-y-acompan%CC%83amiento-del-duelo-por-muerte-1024x683.jpg" 
+    },
+    { id: 5, 
+      titulo: "Seguridad al Paciente", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://ipscines.com/wp-content/uploads/2022/05/seguridad-del-paciente1.jpg" 
+    },
+    { id: 6, 
+      titulo: "Combo Primeros Auxilios", 
+      semanas: "4 Semanas", 
+      clases: "4 Clases", 
+      imagen: "https://escuelaelbs.com/wp-content/uploads/tecnicas-primeros-auxilios.jpg" 
+    },
+    { id: 7, 
+      titulo: "Vacunación", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://www.bucaramanga.gov.co/wp-content/uploads/2021/08/Vacuna-ninos.jpg" 
+    },
+    { id: 8, 
+      titulo: "Atención a Víctimas de Violencia Sexual", 
+      semanas: "3 Semanas", 
+      clases: "3 Clases", 
+      imagen: "https://eldiariodesalud.com/sites/default/files/inline-images/atencion-integral-victima-sexual_0.jpg" 
+    },
+    { id: 9, 
+      titulo: "Toma de Muestras de Laboratorio Clínico", 
+      semanas: "4 Semanas", 
+      clases: "4 Clases", 
+      imagen: "https://www.medicenterips.com/wp-content/uploads/2022/08/DSC_1144_1.jpg" 
+    },
+    { id: 10, 
+      titulo: "Atención a Víctimas con Agentes Químicos", 
+      semanas: "4 Semanas", 
+      clases: "4 Clases", 
+      imagen: "https://www.lacardio.org/wp-content/uploads/2024/08/atencion-integral-a-victimas.webp" 
+    },
   ];
 
   const datos =
