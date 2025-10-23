@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fundsam-education.onrender.com//sitemap.xml
