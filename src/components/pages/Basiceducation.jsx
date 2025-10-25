@@ -34,8 +34,10 @@ const Basiceducation = () => {
       requisitos: [
         "Edad: 6 a 10 años",
         "Certificado de estudios anteriores (si aplica)",
-        "Documento de identidad del estudiante",
-        "Fotocopia del acudiente",
+        "Fotocopia del documento de identidad del estudiante",
+        "Fotocopia del documento de identidad del acudiente",
+        "Fotocopia del SISBEN (si aplica)",
+        "Fotocopia del un recibo de servicio público",
       ],
       image:
         "https://cdn.pixabay.com/photo/2016/03/26/13/09/children-1284645_1280.jpg",
@@ -48,9 +50,10 @@ const Basiceducation = () => {
       desc: "El programa de Bachillerato por Ciclos está diseñado para jóvenes y adultos que desean culminar sus estudios con horarios flexibles y acompañamiento personalizado. Promovemos una educación inclusiva y accesible, adaptada a los ritmos de aprendizaje de cada estudiante.",
       requisitos: [
         "Edad mínima: 13 años",
-        "Documento de identidad",
-        "Certificados de estudios previos (si aplica)",
-        "Dos fotos tamaño documento",
+        "Fotocopia del ocumento de identidad",
+        "Certificados de estudios previos (6, 7, 8 y 9)",
+        "Fotocopia del SISBEN (si aplica)",
+        "Fotocopia de un recibo de servicio público",
       ],
       image: bachillerato,
       bg: "bg-gradient-to-b from-[#E3F2FD] via-[#C5CAE9] to-[#9FA8DA]",

@@ -33,11 +33,11 @@ const sedes = [
   },
   {
     id: 3,
-    nombre: "Sede Soledad (Los Robles)",
-    direccion: "Cll. 15 sur, #48-63, Los Robles",
+    nombre: "Colegio San José del Sena",
+    direccion: "Cra. 6, #5-38, Sabana Grande",
     telefono: "(+57) 607 1122334",
-    position: { lat: 10.922783664977237, lng: -74.80748617575358 },
-    icon: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+    position: { lat: 10.787918107794827, lng: -74.75444590325522 },
+    icon: "https://maps.google.com/mapfiles/ms/icons/purple-dot.png",
   },
 ];
 

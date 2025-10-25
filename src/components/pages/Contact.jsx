@@ -32,7 +32,7 @@ const Contacto = () => {
 
     emailjs
       .sendForm(
-        "service_fyjolrb", // tu Service ID
+        "service_muk8phf", // tu Service ID
         "template_hv5ydq2", // tu Template ID
         formRef.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
@@ -76,21 +76,21 @@ const Contacto = () => {
         {[
           {
             nombre: "Sede Principal",
-            direccion: "Cra. 20 #45-12, Bucaramanga, Santander",
-            telefono: "+57 317 245 6678",
-            correo: "contacto@fundacionsuenosdeamor.edu.co",
+            direccion: "Cll. 93 #7g-48, Las Malvinas",
+            telefono: "(+57) 324-416-3188",
+            correo: "fundsambarranquilla@gmail.com",
           },
           {
-            nombre: "Sede Piedecuesta",
-            direccion: "Cll. 10 #7-30, Piedecuesta, Santander",
-            telefono: "+57 310 456 7890",
-            correo: "piedecuesta@fundacionsuenosdeamor.edu.co",
+            nombre: "Sede Soledad (Los Robles)",
+            direccion: "Cll. 15 sur, #48-63, Los Robles",
+            telefono: "(+57) 324-416-3188",
+            correo: "fundsambarranquilla@gmail.com",
           },
           {
-            nombre: "Sede Floridablanca",
-            direccion: "Av. Principal #45-23, Floridablanca, Santander",
-            telefono: "+57 315 777 9988",
-            correo: "florida@fundacionsuenosdeamor.edu.co",
+            nombre: "Colegio San José del Sena",
+            direccion: "Cra. 6, #5-38, Sabana Grande",
+            telefono: "(+57) 324-416-3188",
+            correo: "fundsambarranquilla@gmail.com",
           },
         ].map((sede, i) => (
           <motion.div
