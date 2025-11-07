@@ -166,16 +166,6 @@ const Nosotros = () => {
             >
               Certificado Camara de Comercio
             </a>
-
-            {/* Botón Certificado RUT */}
-            <a
-              href="/docs/rut-fundsam.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#004AAD] text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-blue-700 transition"
-            >
-              Certificado RUT
-            </a>
           </div>
         </motion.div>
 

@@ -67,17 +67,17 @@ const Footer = () => {
               <li>
                 <span className="block font-medium text-teal-300">Barranquilla</span>
                 Cll. 93 #7g-48, Las Malvinas <br />
-                <span className="text-gray-300">(+57) 607 1234567</span>
+                <span className="text-gray-300">(+57) 324-416-3188</span>
               </li>
               <li>
                 <span className="block font-medium text-teal-300">Soledad</span>
                 Cra. 15 sur #48-63, Los Robles <br />
-                <span className="text-gray-300">(+57) 607 7654321</span>
+                <span className="text-gray-300">(+57) 324-416-3188</span>
               </li>
               <li>
                 <span className="block font-medium text-teal-300">Soledad</span>
-                Cra. 15 sur #48-63, Los Robles <br />
-                <span className="text-gray-300">(+57) 607 7654321</span>
+                Cra. 6, #5-38, Sabana Grande <br />
+                <span className="text-gray-300">(+57) 324-416-3188</span>
               </li>
             </ul>
           </motion.div>

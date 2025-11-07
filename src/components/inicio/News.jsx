@@ -5,48 +5,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import inscripciones from "../../assets/inscripciones_2026.jpg";
+import certificados from "../../assets/certificados_info.jpg";
 
 const News = () => {
   const noticias = [
     {
       id: 1,
-      titulo: "Nueva jornada de alfabetización en la comunidad",
+      titulo: "Inscripciones Abiertas!!",
       descripcion:
-        "La fundación realizó una jornada educativa para adultos mayores con el fin de fortalecer sus habilidades de lectura y escritura.",
+        "La Fundación Sueños de Amor (FUNDSAM) anuncia la apertura de inscripciones y matrículas para Preescolar, Básica Primaria (1° a 5°) y Aceleración de la Primaria. FUNDSAM sigue comprometida con una educación accesible y de calidad para el desarrollo integral de los estudiantes.",
       imagen:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80",
+        inscripciones,
     },
     {
       id: 2,
-      titulo: "Celebración del Día del Niño",
+      titulo: "Certificate en Cuiados Basicos de Salud",
       descripcion:
-        "Una tarde llena de alegría, juegos y aprendizaje para los más pequeños de la fundación.",
+        "La Fundación Sueños de Amor (FUNDSAM) abre inscripciones para sus cursos básicos en salud, dirigidos a quienes desean actualizar o adquirir nuevas competencias. Incluye programas como BLS + ACLS, AIEPI, Humanización, Seguridad del Paciente, Vacunación y Atención a Víctimas. ",
       imagen:
-        "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1350&q=80",
-    },
-    {
-      id: 3,
-      titulo: "Capacitación docente 2025",
-      descripcion:
-        "Nuestros docentes participaron en una capacitación sobre metodologías innovadoras para la enseñanza inicial.",
-      imagen:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80",
-    },
-    {
-      id: 4,
-      titulo: "Capacitación docente 2025",
-      descripcion:
-        "Nuestros docentes participaron en una capacitación sobre metodologías innovadoras para la enseñanza inicial.",
-      imagen:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80",
-    },
-    {
-      id: 5,
-      titulo: "Capacitación docente 2025",
-      descripcion:
-        "Nuestros docentes participaron en una capacitación sobre metodologías innovadoras para la enseñanza inicial.",
-      imagen:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80",
+        certificados,
     },
   ];
 
@@ -65,7 +43,7 @@ const News = () => {
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4500, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
           loop={true}
           className="rounded-2xl overflow-hidden shadow-lg"
         >

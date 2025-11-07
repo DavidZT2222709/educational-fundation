@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import preescolar from "../../assets/pre-escolar.jpg";
 import bachillerato from "../../assets/nosotros-image-1.jpg";
+import estudiantes from "../../assets/estudiantes.jpg";
 
 const Basiceducation = () => {
   const niveles = [
@@ -39,8 +40,7 @@ const Basiceducation = () => {
         "Fotocopia del SISBEN (si aplica)",
         "Fotocopia del un recibo de servicio público",
       ],
-      image:
-        "https://cdn.pixabay.com/photo/2016/03/26/13/09/children-1284645_1280.jpg",
+      image: estudiantes,
       bg: "bg-gradient-to-b from-[#E8F0FE] via-[#D2E3FC] to-[#C0D9FF]",
       decor: "✏️",
     },
