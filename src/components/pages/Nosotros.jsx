@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion"; 
 import { FaUserTie, FaBullseye, FaEye, FaCertificate, FaBalanceScale } from "react-icons/fa";
 import fondo from "../../assets/fondo.jpg";
-import equipo from "../../tecnica_1.jpg";
+import equipo from "../../assets/tecnica_1.jpg";
 import team2 from "../../assets/tecnica_2.jpg";
 
 const Nosotros = () => {
