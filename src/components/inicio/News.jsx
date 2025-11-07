@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import inscripciones from "../../assets/inscripciones_2026.jpg";
-import certificados from "../../assets/certificados_info.jpg";
+import inscripciones from "../../assets/Inscripciones_2026.jpg";
+import certificados from "../../assets/Certificados_info.jpg";
 
 const News = () => {
   const noticias = [
