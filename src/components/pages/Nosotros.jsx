@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion"; 
 import { FaUserTie, FaBullseye, FaEye, FaCertificate, FaBalanceScale } from "react-icons/fa";
 import fondo from "../../assets/fondo.jpg";
-import equipo from "../../assets/nosotros-image-1.jpg";
-import team2 from "../../assets/nosotros-image-2.jpg";
+import equipo from "../../tecnica_1.jpg";
+import team2 from "../../assets/tecnica_2.jpg";
 
 const Nosotros = () => {
 
@@ -159,12 +159,12 @@ const Nosotros = () => {
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             {/* Botón Certificado MinEducación */}
             <a
-              href="/docs/camara-comercio-fundsam.pdf"
+              href="/docs/rut-fundsam.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-[#004AAD] text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:bg-blue-700 transition"
             >
-              Certificado Camara de Comercio
+              RUT Fundsam
             </a>
           </div>
         </motion.div>
