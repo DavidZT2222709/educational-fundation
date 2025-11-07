@@ -12,7 +12,7 @@ const News = () => {
   const noticias = [
     {
       id: 1,
-      titulo: "Inscripciones Abiertas!!",
+      titulo: "Inscripciones Abiertas!!!",
       descripcion:
         "La Fundación Sueños de Amor (FUNDSAM) anuncia la apertura de inscripciones y matrículas para Preescolar, Básica Primaria (1° a 5°) y Aceleración de la Primaria. FUNDSAM sigue comprometida con una educación accesible y de calidad para el desarrollo integral de los estudiantes.",
       imagen:
