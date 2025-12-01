@@ -130,23 +130,23 @@ const AllCourses = () => {
     },
     {
       id: 9,
-      titulo: "Belleza y Peluquería",
+      titulo: "Auxiliar Contable y Financiero",
       semanas: "25 Semanas",
       clases: "25 Clases",
       imagen:
-        "https://img.freepik.com/fotos-premium/salon-belleza-peluqueria-mujeres_170532-2138.jpg",
+        "https://servicioscaja.comfenalcovalle.com.co/wp-content/uploads/2024/04/Auxiliar-administrativo-1024x683.png",
       descripcion:
-        "El programa en Belleza y Peluquería forma profesionales en técnicas de corte, coloración, estilismo, cuidado capilar y estética facial. Desarrolla habilidades artísticas y de atención al cliente para desempeñarse en salones de belleza o como emprendedores del sector.",
+        "El Auxiliar Contable y Financiero adquiere competencias en el manejo de ciclos contables, normativa tributaria, facturación y software financiero. Está preparado para apoyar la gestión de tesorería, liquidación de impuestos y análisis de costos en diversos sectores empresariales.",
     },
     {
       id: 10,
-      titulo: "Operador de Computadoras",
+      titulo: "Tecnico en Recreación y Deportes",
       semanas: "25 Semanas",
       clases: "25 Clases",
       imagen:
-        "https://institutoferrer.com/wp-content/uploads/2020/08/estudiante-enfocado-clase-informatica_13339-284872.jpg",
+        "https://static.wixstatic.com/media/bf3f9c_85eff494d3c44f55aa5c108880baaeb6~mv2.jpg/v1/fill/w_4803,h_2430,al_c,q_90/tecnicooendeportes.jpg",
       descripcion:
-        "El Operador de Computadoras adquiere competencias en el manejo de software de oficina, digitación, mantenimiento básico y redes informáticas. Está preparado para apoyar procesos administrativos, contables y tecnológicos en diversos sectores laborales.",
+        "El Técnico en Recreación y Deportes adquiere competencias en el manejo de técnicas recreativas, entrenamiento básico y primeros auxilios. Está preparado para apoyar la formación deportiva, gestionar escenarios recreativos y promover el bienestar físico en clubes, gimnasios y cajas de compensación.",
     },
   ];
 
@@ -201,6 +201,16 @@ const AllCourses = () => {
         "https://selecciones.com.mx/wp-content/uploads/2023/10/razones-del-por-que-aprender-ingles-desde-ninos.png",
       descripcion:
         "Este curso introduce a los niños al idioma inglés de forma divertida y dinámica, fomentando la pronunciación, el vocabulario básico y la comprensión oral mediante juegos, canciones y actividades interactivas.",
+    },
+    {
+      id: 6,
+      titulo: "Belleza y Peluquería",
+      semanas: "25 Semanas",
+      clases: "25 Clases",
+      imagen:
+        "https://img.freepik.com/fotos-premium/salon-belleza-peluqueria-mujeres_170532-2138.jpg",
+      descripcion:
+        "El programa en Belleza y Peluquería forma profesionales en técnicas de corte, coloración, estilismo, cuidado capilar y estética facial. Desarrolla habilidades artísticas y de atención al cliente para desempeñarse en salones de belleza o como emprendedores del sector.",
     },
   ];
 
