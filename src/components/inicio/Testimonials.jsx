@@ -32,8 +32,11 @@ const testimonials = [
 
 // ARRAY DE VIDEOS
 const videoList = [
+  "/test0.mp4",
   "/test1.mp4",
-  "/test2.mp4"
+  "/test2.mp4",
+  "/test3.mp4",
+  "/test4.mp4",
 ];
 
 const Testimonials = () => {
