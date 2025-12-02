@@ -1,4 +1,6 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+// 1. IMPORTAR LA LIBRERÍA SEO
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Statical components
 import Navbar from './components/staticelements/Navbar.jsx'
@@ -17,7 +19,6 @@ import Stats from './components/inicio/Stats.jsx'
 import Mapa from './components/inicio/Mapa.jsx'
 import News from './components/inicio/News.jsx'
 
-
 // Pages
 import AllCourses from './components/pages/AllCourses.jsx'
 import Contact from './components/pages/Contact.jsx'
@@ -26,38 +27,53 @@ import Basiceducation from './components/pages/Basiceducation.jsx'
 
 function App() {
   return (
-    <Router basename='/'>
-      <main>
-        <Navbar />
+    // 2. ENVOLVER TODA LA APP EN EL PROVIDER
+    <HelmetProvider>
+      <Router basename='/'>
+        <main>
+          
+          {/* 3. AQUI ESTÁ LA MAGIA DEL SEO (Lo que lee Google) */}
+          <Helmet>
+            <title>Fundsam - Fundación Sueños de Amor y Motivos | Barranquilla</title>
+            <meta 
+              name="description" 
+              content="Bienvenidos a Fundsam (Fundación Sueños de Amor y Motivos) en Barranquilla. Transformamos vidas a través de la educación básica, cursos y bienestar social." 
+            />
+            {/* Palabras clave extra para ayudar al robot */}
+            <meta name="keywords" content="Fundsam, Fundación Sueños de Amor, Barranquilla, Educación, Cursos, Fundación en Barranquilla, Ayuda Social" />
+          </Helmet>
 
-        <Routes>
-          {/* Principal Pages */}
-          <Route path='/' element={
-            <>
-              <Hero />
-              <News />
-              <Programas />
-              <Testimonials />
-              <Requirements />
-              <Reasons />
-              <Stats />
-              <Mapa />
-            </>
-          } />
+          <Navbar />
 
-          {/* All Courses Page */}
-          <Route path='/AllCourses' element={<AllCourses />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Nosotros' element={<Nosotros />} />
-          <Route path='/Basiceducation' element={<Basiceducation />} />
-        </Routes>
+          <Routes>
+            {/* Principal Pages */}
+            <Route path='/' element={
+              <>
+                <Hero />
+                <News />
+                <Programas />
+                <Testimonials />
+                <Requirements />
+                <Reasons />
+                <Stats />
+                <Mapa />
+              </>
+            } />
 
-        <Footer />
-        <ScrollToTopButton />
-        <Chat />
-        <WhatsAppButton />
-      </main>
-    </Router>
+            {/* All Courses Page */}
+            <Route path='/AllCourses' element={<AllCourses />} />
+            <Route path='/Contact' element={<Contact />} />
+            <Route path='/Nosotros' element={<Nosotros />} />
+            <Route path='/Basiceducation' element={<Basiceducation />} />
+          </Routes>
+
+          <Footer />
+          <ScrollToTopButton />
+          <Chat />
+          <WhatsAppButton />
+        </main>
+      </Router>
+    </HelmetProvider>
   )
 }
 
