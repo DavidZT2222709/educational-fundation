@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"; // 1. IMPORTA useRef y useEffect
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -41,16 +41,14 @@ const videoList = [
 
 const Testimonials = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videoRef = useRef(null); // 2. CREAMOS LA REFERENCIA
+  const videoRef = useRef(null);
 
-  // 3. EFECTO PARA FORZAR PLAY AL CAMBIAR DE VIDEO
+  // EFECTO PARA FORZAR PLAY AL CAMBIAR DE VIDEO
   useEffect(() => {
-    // Pequeño timeout para asegurar que el DOM se actualizó
     const timer = setTimeout(() => {
       if (videoRef.current) {
-        // Intentamos reproducir y capturamos errores (útil para ver si la ruta está mal)
         videoRef.current.play().catch((error) => {
-          console.error("Error al intentar reproducir el video automáticamnete:", error);
+          console.error("Error al intentar reproducir el video automáticamente:", error);
         });
       }
     }, 100);
@@ -94,6 +92,7 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
+          {/* COLUMNA IZQUIERDA: SWIPER */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -119,7 +118,6 @@ const Testimonials = () => {
               >
                 {testimonials.map((t, index) => (
                   <SwiperSlide key={index}>
-                    {/* AQUI ESTÁ EL CAMBIO: Agregué 'text-center' */}
                     <div className="bg-white p-10 rounded-2xl shadow-lg relative h-[280px] flex flex-col justify-between text-center">
                       <p className="text-lg text-gray-700 italic mb-6 overflow-hidden">
                         "{t.text}"
@@ -135,23 +133,29 @@ const Testimonials = () => {
             </motion.div>
           </motion.div>
 
+          {/* COLUMNA DERECHA: VIDEO (CORREGIDO) */}
           <motion.div
-            className="w-full"
+            className="w-full flex justify-center" // Centramos el contenedor del video
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full aspect-video bg-black/20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 backdrop-blur-sm flex items-center justify-center">
+            {/* CORRECCIONES APLICADAS:
+                1. max-w-[320px]: Ancho de celular para no estirar la página.
+                2. aspect-[9/16]: Formato vertical para Reels/TikTok.
+                3. mx-auto: Centrado horizontal.
+            */}
+            <div className="relative w-full max-w-[320px] aspect-[9/16] bg-black/20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 backdrop-blur-sm flex items-center justify-center mx-auto">
               
               <video
-                ref={videoRef} // 4. VINCULAMOS LA REFERENCIA
+                ref={videoRef}
                 key={currentVideoIndex} 
                 src={videoList[currentVideoIndex]}
                 className="w-full h-full object-cover"
                 controls
-                muted // Obligatorio para autoplay
-                playsInline // Importante para móviles (evita pantalla completa automática)
+                muted
+                playsInline
                 onEnded={handleVideoEnd}
               />
 
